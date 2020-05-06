@@ -18,7 +18,11 @@ class TypingDots @JvmOverloads constructor(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.typing_dots_view, this, true)
-        dot_3.onScaleDownCompleteListener = { start() }
+        dot_3.onScaleDownCompleteListener = {
+            if (isAttachedToWindow) {
+                start()
+            }
+        }
     }
 
     fun start() {
