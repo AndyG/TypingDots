@@ -6,10 +6,11 @@
 
     <com.discord.loadingdotsdemo.TypingDot
         android:id="@+id/dot_1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/dot_2"
@@ -17,20 +18,22 @@
 
     <com.discord.loadingdotsdemo.TypingDot
         android:id="@+id/dot_2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintLeft_toRightOf="@id/dot_1"
         app:layout_constraintRight_toLeftOf="@id/dot_3"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.discord.loadingdotsdemo.TypingDot
         android:id="@+id/dot_3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
         app:layout_constraintLeft_toRightOf="@id/dot_2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

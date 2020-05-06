@@ -21,18 +21,22 @@ class TypingDot @JvmOverloads constructor(
         this.background = backgroundDrawable
     }
 
+    var onScaleDownCompleteListener: () -> Unit = { }
+
     fun start() {
         scaleAndFadeUpAnimation.setAnimationListener(object : AnimationListenerImpl() {
             override fun onAnimationEnd(animation: Animation?) {
                 startDownAnimation()
             }
         })
+        scaleAndFadeUpAnimation.fillAfter = true
 
         scaleAndFadeDownAnimation.setAnimationListener(object : AnimationListenerImpl() {
             override fun onAnimationEnd(animation: Animation?) {
-                startUpAnimation()
+                onScaleDownCompleteListener()
             }
         })
+        scaleAndFadeDownAnimation.fillAfter = true
 
         startUpAnimation()
     }
